@@ -1,6 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <center>  <h1> LOGIN</h1> </center>
+</head>
 <style>
 body{
   font-family: Calibri, Helvetica, sans-serif;
@@ -44,21 +47,16 @@ hr {
   opacity: 1;
 }
 </style>
-</head>
-<body>
-<form>
-  <div class="container">
-  <center>  <h1> LOGIN</h1> </center>
-  <hr>
+<div class="container">
+<form action="login" method="POST">
+    {% csrf_token %}
+    <label> <b>Username:</b> </label>
+    <input type="text" name="username" placeholder="Username" size="15" required />
 
-<label> <b>Username:</b> </label>
-<input type="text" name="username" placeholder="Username" size="15"required />
-
-
-    <label for="psw"><b>Password:</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label><b>Password:</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required />
 
   <button type="submit" class="registerbtn">Login</button>
 </form>
-</body>
+</div>
 </html>
